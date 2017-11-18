@@ -1,0 +1,37 @@
+<div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4>
+            Todo List
+          </h4>
+        </div>
+        <table class="table table-fixed">
+          <thead>
+            <tr>
+              <th class="col-xs-2">#</th><th class="col-xs-8">Title</th><th class="col-xs-2">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="todo in todoList">
+              <td class="col-xs-2">
+              <span ng-if="!todo.completed"><strike>{{todo.id}}</strike></span>
+              <span ng-if="todo.completed">{{todo.id}}</span>
+              </td>
+              <td class="col-xs-8">
+              <span ng-if="!todo.completed"><strike>{{todo.title}}</strike></span>
+              <span ng-if="todo.completed">{{todo.title}}</span>
+              </td>
+              <td class="col-xs-2">&nbsp;</td>
+            </tr>
+            <tr>
+            <td class="col-xs-2"><input type="text" style ="width: 50%;" class="form-control" ng-model="data.id" readonly></td>
+            <td class="col-xs-8"><input type="text" style ="width: 75%;" class="form-control" ng-model="data.title" ></td>
+            <td class="col-xs-2">
+            <button type="button" class="btn btn-primary" ng-click="savetodo(data)">Save</button>
+            </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+  </div>

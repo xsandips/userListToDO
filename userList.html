@@ -1,0 +1,73 @@
+<div class="row">
+   <div class="col-md-12"
+      ng-repeat="user in userDetails">
+      <div class="panel panel-info">
+         <div class="panel-heading">
+            <h3 class="panel-title">{{user.name}}</h3>
+         </div>
+         <div class="panel-body">
+            <div class="row">
+               <div class=" col-md-12">
+                  <table class="table table-user-information">
+                     <tbody>
+                        <tr>
+                           <td><i class="fa fa-user" aria-hidden="true"></i>
+                              User-Name:
+                           </td>
+                           <td>{{user.username}}</td>
+                        </tr>
+                        <tr>
+                           <td><i class="glyphicon glyphicon-envelope"></i> Email:</td>
+                           <td>{{user.email}}</td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-home" aria-hidden="true"></i>
+                              Address
+                           </td>
+                           <td><span><strong>{{user.address.street}},{{user.address.suite}}<strong><br>
+                              {{user.address.city}}<br> {{user.address.zipcode}}<br></span>
+                              <span>
+                              Lat:{{user.address.geo.lat}} Long:{{user.address.geo.lng}}</span>
+                           <td>
+                        </tr>
+                        <tr>
+                        <tr>
+                           <td><i class="fa fa-phone" aria-hidden="true"></i>
+                              Contact
+                           </td>
+                           <td>{{user.phone}}</td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-globe" aria-hidden="true"></i>
+                              Website
+                           </td>
+                           <td><a href="{{user.website}}">{{user.website}}</a></td>
+                        </tr>
+                        <tr>
+                           <td><i class="fa fa-briefcase" aria-hidden="true"></i>
+                              Company
+                           </td>
+                           <td><span style="font-weight: bold;">{{user.company.name}}</span><br>
+                              <span>{{user.company.catchPhrase}}</span><br> <span>{{user.company.bs}}</span>
+                           </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                           <td>
+                           </td>
+                           <td>
+                              <span class="pull-right">
+                              <a							
+                                 type="button" class="btn btn-md btn-primary" href="#/todo/{{user.id}}"><i
+                                 ></i>View Todos</a>
+                              </span>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
